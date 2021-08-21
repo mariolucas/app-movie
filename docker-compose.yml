@@ -1,0 +1,9 @@
+version: "3.7" 
+services:
+  php12:
+    image: 'bitnami/php-fpm:latest'
+    ports:
+      - '8000:80'
+    volumes:
+      - "./app:/app"
+    command: php -S 0.0.0.0:80 -t ./public/
